@@ -11,9 +11,6 @@ import com.raju.shopping.registration.repository.UserIdRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
-
-import java.util.List;
 
 @Service
 @Slf4j
@@ -52,11 +49,11 @@ public class RegistrationService {
         CreateUserResponse response= new CreateUserResponse();
         if (saved!= null){
             log.info("User Details saved successfully");
-            response.setStatus("Success");
+            response.setStatusMessage("Success");
         }
         else{
             log.error("Error in saving details");
-            response.setStatus("Error");
+            response.setStatusMessage("Error");
         }
         return response;
     }

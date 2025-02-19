@@ -6,6 +6,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class CreateUserResponse {
-    private String status;
+    private String statusMessage;
     private int userId;
 }
